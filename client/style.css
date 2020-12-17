@@ -1,0 +1,362 @@
+/*==========================*/
+/*root properties*/
+/*==========================*/
+:root {
+    --main-bg-color: #02020B;
+    --secondary-bg-color: #0B2027;
+    --color-primary: #7FB069;
+    --color-tertiary: #E57A44;
+    --color-secondary: #587792;
+    --text-color-primary: #CCDDE2;
+    --text-color-secondary: #FDFFFC;
+
+    --color-alert: #FFCF00;
+}
+
+
+/*==========================*/
+/*CSS for ALL pages*/
+/*==========================*/
+
+
+body{height:100vh;}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+}
+
+ul {
+    list-style-type: none;
+  }
+
+label {
+    color: var(--text-color-primary);
+}
+
+a > img {
+    float: left;
+    height: 1rem;
+    width: auto;
+}
+a span {
+    position: relative;
+    left: 1%;
+}
+
+h4.room-name {
+    color: var(--color-alert);
+}
+
+#app-view {
+    width: 80%;
+}
+#app-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.page-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--color-primary);
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+#app-view {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* overflow-y: auto; */
+}
+
+
+#page-view {
+    height: 100%;
+    background-color: var(--main-bg-color);
+}
+
+
+
+/*Apply these CSS rules when device width is < 1024px */
+@media (max-width: 1024px) {
+    #app-view {
+        width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        #app-view {
+            width: 100%;
+        }
+    }
+}
+
+/* #app-menu .menu-item > a:hover {
+    color: var(--color-alert);
+    padding: 0%;
+} */
+
+#app-menu li:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-alert);
+}
+
+#app-menu li:hover a {
+    color: var(--color-alert);
+}
+#app-menu .menu-item:hover {
+    background-color: var(--color-secondary);
+}
+
+#app-menu > li {
+
+    font-style: fantasy;
+    font-weight: bold;
+    size: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 22.5%;
+    padding-right: 22.5%;
+}
+
+#app-menu .menu-item > a {
+    color: var(--main-bg-color);
+}
+
+#app-menu {
+    background-color: var(--color-primary);;
+}
+
+.menu-item > a {
+    white-space: nowrap;
+  overflow: hidden;
+}
+
+/*==========================*/
+/*CSS for chat page*/
+/*==========================*/
+.room-name {
+    color: var(--text-color-primary);
+}
+.message-list {
+    display: flex ;
+    flex-direction: column;
+    padding: 0 20px;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.message-text {
+    padding: 9px 14px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+    white-space: normal;
+    word-wrap:break-word;
+}
+
+.message-user {
+    color: var(--text-color-secondary);
+}
+
+.other-message  .message-text{
+    color: white;
+    background-color: grey;
+    border: 1px solid grey;
+    border-radius: 14px 14px 14px 0;
+    margin-right: 75%;
+}
+
+.my-message  .message-text{
+    color: white;
+    background-color: darkcyan;
+    border: 1px solid darkcyan;
+    border-radius: 14px 14px 0 14px;
+    margin-left: 75%;
+}
+.my-message .message-user {
+    margin-left: 75%;
+}
+.my-message {
+    display: flex;
+    flex-direction: column;
+}
+
+.other-message {
+    display: flex;
+    flex-direction: column;
+}
+
+#send {
+   border-color: var(--color-secondary);
+   border-style: solid;
+   background-color: var(--color-secondary);
+   border-radius: 2rem;
+   padding: 1% 2% 1% 2%;
+   position: relative;
+   right: 2%;
+   width: 25;
+}
+
+#send:hover {
+    border-color: var(--main-bg-color);
+    background-color: var(--main-bg-color);
+    color: var(--color-alert);
+}
+
+textarea {
+    background-color: var(--main-bg-color);
+    color: var(--color-alert);
+    resize: none;
+    overflow: auto;
+    margin: auto;
+    padding: 1%;
+
+    border-radius: 2rem;
+    border-color: var(--main-bg-color);
+
+    outline: none;
+    width: 75%;
+
+    box-shadow: 1px 1px 1px 1px #000000;
+}
+
+/*==========================*/
+/*CSS for home page*/
+/*==========================*/
+
+.room-list li:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--secondary-bg-color);
+}
+
+.room-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+}
+
+ul.room-list > li {
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+#room-name {
+    background-color: var(--main-bg-color);
+    color: var(--color-alert);
+    resize: none;
+    overflow: auto;
+    margin: auto;
+    padding: 1%;
+
+    border-radius: 2rem;
+    border-color: var(--main-bg-color);
+
+    outline: none;
+    width: 60%;
+
+    box-shadow: 1px 1px 1px 1px #000000;
+}
+
+#create-room {
+    border-color: var(--color-secondary);
+    border-style: solid;
+    background-color: var(--color-secondary);
+    width: 25%;
+    border-radius: 2rem;
+    padding: 1%;
+    position: relative;
+    right: 1%;
+}
+
+#create-room:hover {
+    border-color: var(--main-bg-color);
+    background-color: var(--main-bg-color);
+    color: var(--color-alert);
+}
+
+/*==========================*/
+/*CSS for profile page*/
+/*==========================*/
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20%;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: row;
+}
+#username-input{
+    position: relative;
+    left: 10%;
+    border-color: var(--main-bg-color);
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color-secondary);
+}
+#password-input {
+    position: relative;
+    left: 10.5%;
+    border-color: var(--main-bg-color);
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color-secondary);
+}
+
+#avatar-input {
+    position: relative;
+    left: 6.5%;
+    color: var(--text-color-secondary);
+    background-color: var(--main-bg-color);
+}
+
+#save-button {
+    margin: auto;
+    border-color: var(--color-secondary);
+    border-style: solid;
+    background-color: var(--color-secondary);
+    width: 25%;
+    border-radius: 2rem;
+    padding: 1%;
+}
+
+#save-button:hover {
+
+    border-color: var(--main-bg-color);
+    background-color: var(--main-bg-color);
+    color: var(--color-alert);
+    border-style: inset;
+
+}
