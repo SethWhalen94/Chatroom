@@ -1,2 +1,2 @@
 # Chatroom
- A chatroom built using Javascript, MongoDB, and ExpressJS
+ A chatroom built using HTML, CSS, Javascript, MongoDB, and ExpressJS
