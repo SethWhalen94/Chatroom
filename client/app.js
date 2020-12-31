@@ -617,7 +617,7 @@ function main() {
     });
 
     //  Used for testing code Assignment 2, 3
-    cpen400a.export(arguments.callee, { renderRoute, lobbyView, chatView, profileView, lobby, refreshLobby, socket, makeConversationLoader});
+    //cpen400a.export(arguments.callee, { renderRoute, lobbyView, chatView, profileView, lobby, refreshLobby, socket, makeConversationLoader});
 
 }
 

@@ -313,5 +313,5 @@ app.listen(port, () => {
 });
 
 //	Used for testing Assignment 3, 4
-cpen400a.connect('http://35.183.65.155/cpen400a/test-a5-server.js');
-cpen400a.export(__filename, { app, messages, broker, db, messageBlockSize, sessionManager, isCorrectPassword }); // sessionManager, isCorrectPassword
+//cpen400a.connect('http://35.183.65.155/cpen400a/test-a5-server.js');
+//cpen400a.export(__filename, { app, messages, broker, db, messageBlockSize, sessionManager, isCorrectPassword }); // sessionManager, isCorrectPassword
